@@ -20,3 +20,13 @@ echo "Employee daily wage is $salary."
 else
 echo "Employee daily wage is 0."
 fi
+
+partAttend=$((RANDOM%2))
+partTimeHour=8
+if (($present == $partAttend))
+then
+salary=$(($wagePerHour*$partTimeHour))
+echo "Part time employee daily wage is $salary."
+else
+echo "Part time employee is Absent."
+fi
