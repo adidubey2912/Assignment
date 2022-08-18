@@ -13,7 +13,6 @@ $present)
 	echo "Employee is Absent.";;
 esac
 
-
 case $attendCheck in
 $present)
 	salary=$(( $wagePerHour * $fullDayHour ))
