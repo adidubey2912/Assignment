@@ -31,3 +31,20 @@ $present)
 *)
 	echo "Part time employee is Absent."
 esac
+
+workingDay=20
+
+for (( day=1; day<=$workingDay; day++ ))
+do
+	empCheck=$((RANDOM%2))
+
+	if (($present == $empCheck))
+	then
+		salary=$(( $wagePerHour*fullDayHour ))
+		(( tSalary=tSalary+salary ))
+	else
+		salary=0;
+	fi
+done
+echo "Monthly wages are $tSalary."
+
